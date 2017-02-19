@@ -41,7 +41,7 @@ Now, get the _Client ID_ and _Client secret_.
 
 **Endpoints**
 
-    * `http://localhost:8080/auth/google`: Endpoint for Google authentication. Point your application to this endpoint to login with Google.
+  * `http://localhost:8080/auth/google`: Endpoint for Google authentication. Point your application to this endpoint to login with Google.
 
 **Results**
 
@@ -55,7 +55,7 @@ Visit [Github](https://github.com/settings/applications/new) and create a new ap
 
 **Endpoints**
 
-    * `http://localhost:8080/auth/github`: Endpoint for Github authentication. Point your application to this endpoint to login with Github.
+  * `http://localhost:8080/auth/github`: Endpoint for Github authentication. Point your application to this endpoint to login with Github.
 
 **Results**
 
