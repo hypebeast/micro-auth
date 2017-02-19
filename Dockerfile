@@ -1,8 +1,10 @@
-FROM openresty/openresty:xenial
+FROM openresty/openresty:alpine-fat
 
 MAINTAINER Sebastian Ruml <sebastian@sebastianruml.name>
 
-RUN apt-get install -y libssl-dev
+RUN apk add --update \
+    openssl-dev \
+    && rm /var/cache/apk/*
 
 RUN /usr/local/openresty/luajit/bin/luarocks install lapis
 RUN /usr/local/openresty/luajit/bin/luarocks install penlight
