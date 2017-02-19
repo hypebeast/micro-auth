@@ -19,7 +19,7 @@ It's build with [Nginx/OpenResty](https://openresty.org/en/), [Lapis](http://lea
   * Install (if you don't have them):
     * [Docker](https://www.docker.com/)
     * [docker-compose](https://docs.docker.com/compose/)
-  * Set required [environment variables](#Environment variables)
+  * Setup required [environment variables](#environment-variables)
   * Run in _development_ mode:
     * Run the application with `docker-compose -f docker-compose-dev.yml up`
   * Run in _production_ mode:
