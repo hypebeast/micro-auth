@@ -1,0 +1,23 @@
+FROM openresty/openresty:alpine-fat
+
+MAINTAINER Sebastian Ruml <sebastian@sebastianruml.name>
+
+RUN apk add --update \
+    openssl-dev \
+    && rm /var/cache/apk/*
+
+RUN /usr/local/openresty/luajit/bin/luarocks install lapis
+RUN /usr/local/openresty/luajit/bin/luarocks install penlight
+
+RUN mkdir /app
+WORKDIR /app
+
+ENV LAPIS_OPENRESTY "/usr/local/openresty/bin/openresty"
+
+VOLUME /app
+
+EXPOSE 8080
+
+ENTRYPOINT ["/usr/local/openresty/luajit/bin/lapis"]
+
+CMD ["server", "development"]

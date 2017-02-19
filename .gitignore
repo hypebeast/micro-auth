@@ -1,0 +1,29 @@
+# Numerous always-ignore extensions
+*.diff
+diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+nbproject
+Thumbs.db
+
+# Lua specific files
+app/*_temp/
+app/*.compiled
+app/logs/
+
+# env file
+.env
