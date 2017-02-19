@@ -3,8 +3,9 @@ FROM openresty/openresty:xenial
 MAINTAINER Sebastian Ruml <sebastian@sebastianruml.name>
 
 RUN apt-get install -y libssl-dev
-RUN /usr/local/openresty/luajit/bin/luarocks install \
-  lapis
+
+RUN /usr/local/openresty/luajit/bin/luarocks install lapis
+RUN /usr/local/openresty/luajit/bin/luarocks install penlight
 
 RUN mkdir /app
 
