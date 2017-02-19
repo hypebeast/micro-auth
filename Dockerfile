@@ -11,7 +11,7 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD ./server /app
+ADD ./app /app
 
 ENV LAPIS_OPENRESTY "/usr/local/openresty/bin/openresty"
 
