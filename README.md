@@ -72,6 +72,9 @@ $ cp .env.example .env
 
 end set the required variables.
 
+## Secrets in docker swarm
+Setting the above environment variables with `_FILE` pointed at the secret mount inside the container. `-e GOOGLE_SECRET_FILE=/run/secrets/google_secret`. This will set the contents on the file as the value of the environment variable.
+
 ### General
 
   * `APP_URL`: Specify the URL of `micro-auth` (default: `http://localhost:8080` in development mode). The `APP_URL` must be set in production mode.
