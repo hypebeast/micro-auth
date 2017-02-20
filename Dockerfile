@@ -3,7 +3,7 @@ FROM openresty/openresty:alpine-fat
 MAINTAINER Sebastian Ruml <sebastian@sebastianruml.name>
 
 RUN apk add --update \
-    openssl-dev \
+    openssl-dev bash \
     && rm /var/cache/apk/*
 
 RUN /usr/local/openresty/luajit/bin/luarocks install lapis
@@ -19,6 +19,6 @@ ENV LAPIS_OPENRESTY "/usr/local/openresty/bin/openresty"
 
 EXPOSE 8080
 
-ENTRYPOINT ["/usr/local/openresty/luajit/bin/lapis"]
+ENTRYPOINT ["/app/entrypoint.sh"]
 
 CMD ["server", "production"]
