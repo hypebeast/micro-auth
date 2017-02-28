@@ -45,7 +45,7 @@ Now, get the _Client ID_ and _Client secret_.
 
 **Results**
 
-After successfull authentication with Google the user is redirect to the URL specified in `GOOGLE_REDIRECT_URL` with the access token saved in the `access_token` query parameter.
+After successful authentication with Google the user is redirect to the URL specified in `GOOGLE_REDIRECT_URL` with the access token saved in the `access_token` query parameter.
 
 ### Github
 
