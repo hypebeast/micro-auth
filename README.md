@@ -45,7 +45,7 @@ Now, get the _Client ID_ and _Client secret_.
 
 **Results**
 
-After successfull authentication with Google the user is redirect to the URL specified in `GOOGLE_REDIRECT_URL` with the access token saved in the `access_token` query parameter.
+After successful authentication with Google the user is redirect to the URL specified in `GOOGLE_REDIRECT_URL` with the access token saved in the `access_token` query parameter.
 
 ### Github
 
@@ -59,7 +59,7 @@ Visit [Github](https://github.com/settings/applications/new) and create a new ap
 
 **Results**
 
-After successfull authentication with Github the user is redirect to the URL specified in `GITHUB_REDIRECT_URL` with the access token saved in the `access_token` query parameter.
+After successful authentication with Github the user is redirect to the URL specified in `GITHUB_REDIRECT_URL` with the access token saved in the `access_token` query parameter.
 
 
 ## Environment variables
@@ -83,13 +83,13 @@ Setting the above environment variables with `_FILE` pointed at the secret mount
 
   * `GOOGLE_CLIENT_ID`: The Google application client id (required)
   * `GOOGLE_CLIENT_SECRET`: The Google application client secret (required)
-  * `GOOGLE_REDIRECT_URL`: The url to redirect the user once the authentication was successfull
+  * `GOOGLE_REDIRECT_URL`: The url to redirect the user once the authentication was successful
 
 ### Github
 
   * `GITHUB_CLIENT_ID`: The Github application client id (required)
   * `GITHUB_CLIENT_SECRET`: The Github application client secret (required)
-  * `GITHUB_REDIRECT_URL`: The url to redirect the user once the authentication was successfull
+  * `GITHUB_REDIRECT_URL`: The url to redirect the user once the authentication was successful
 
 
 ## License
