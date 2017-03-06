@@ -1,15 +1,15 @@
 # micro-auth
 
-A microservice that makes adding authentication with Google or Github to your application easy.
+A microservice that makes adding authentication with Google or GitHub to your application easy.
 
-This service allows you to use Google and Github OAuth2 service to add authentication to your applications in a very straightforward way.
+This service allows you to use Google and GitHub OAuth2 service to add authentication to your applications in a very straightforward way.
 
 It's build with [Nginx/OpenResty](https://openresty.org/en/), [Lapis](http://leafo.net/lapis/) and [Docker](https://www.docker.com/). This enables the service to be very performant and requires only minimal system resources.
 
 
 ## Features
 
-  * Use [Google](https://developers.google.com/identity/protocols/OAuth2) or [Github](https://developer.github.com/v3/oauth/) OAuth2 authentication to provide a simple login mechanism for your application.
+  * Use [Google](https://developers.google.com/identity/protocols/OAuth2) or [GitHub](https://developer.github.com/v3/oauth/) OAuth2 authentication to provide a simple login mechanism for your application.
   * Quick setup with [Docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/). With support for development and production environments.
   * Based on [Lapis](http://leafo.net/lapis) and [Nginx/OpenResty](https://openresty.org/en/).
 
@@ -25,7 +25,7 @@ It's build with [Nginx/OpenResty](https://openresty.org/en/), [Lapis](http://lea
   * Run in _production_ mode:
     * Run the application with `docker-compose up`
   * Once `micro-auth` is running, you can point your login to one of the following urls (URLs are for development mode):
-    * `http://localhost:8080/auth/github`: For Github login
+    * `http://localhost:8080/auth/github`: For GitHub login
     * `http://localhost:8080/auth/google`: For Google login
 
 
@@ -47,19 +47,19 @@ Now, get the _Client ID_ and _Client secret_.
 
 After successful authentication with Google the user is redirect to the URL specified in `GOOGLE_REDIRECT_URL` with the access token saved in the `access_token` query parameter.
 
-### Github
+### GitHub
 
 **Setup**
 
-Visit [Github](https://github.com/settings/applications/new) and create a new application on Github to get your client id and secret.
+Visit [GitHub](https://github.com/settings/applications/new) and create a new application on GitHub to get your client id and secret.
 
 **Endpoints**
 
-  * `http://localhost:8080/auth/github`: Endpoint for Github authentication. Point your application to this endpoint to login with Github.
+  * `http://localhost:8080/auth/github`: Endpoint for GitHub authentication. Point your application to this endpoint to login with Github.
 
 **Results**
 
-After successful authentication with Github the user is redirect to the URL specified in `GITHUB_REDIRECT_URL` with the access token saved in the `access_token` query parameter.
+After successful authentication with GitHub the user is redirect to the URL specified in `GITHUB_REDIRECT_URL` with the access token saved in the `access_token` query parameter.
 
 
 ## Environment variables
@@ -85,10 +85,10 @@ Setting the above environment variables with `_FILE` pointed at the secret mount
   * `GOOGLE_CLIENT_SECRET`: The Google application client secret (required)
   * `GOOGLE_REDIRECT_URL`: The url to redirect the user once the authentication was successful
 
-### Github
+### GitHub
 
-  * `GITHUB_CLIENT_ID`: The Github application client id (required)
-  * `GITHUB_CLIENT_SECRET`: The Github application client secret (required)
+  * `GITHUB_CLIENT_ID`: The GitHub application client id (required)
+  * `GITHUB_CLIENT_SECRET`: The GitHub application client secret (required)
   * `GITHUB_REDIRECT_URL`: The url to redirect the user once the authentication was successful
 
 
